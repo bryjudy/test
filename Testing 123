@@ -1,0 +1,18 @@
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Testing 123")
