@@ -162,3 +162,85 @@ x1 = (-b + (b**2 - 4*a*c)**0.5) / (2*a)
 x2 = (-b - (b**2 - 4*a*c)**0.5) / (2*a)
 
 print("The solutions are: x1 =", x1, "and x2 =", x2)
+
+# Changes for task: Create a new file named quadratic_formula.py
+with open("quadratic_formula.py", "w") as file:
+    file.write("""
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+""")
+
+# Changes for task: Copy the code for the quadratic formula from the auto generated python file
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# Changes for task: Paste the code into the quadratic_formula.py file
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# Test the function
+print(quadratic_formula(1, -3, 2))
+
+# Changes for task: Remove the code for the quadratic formula from the original file
+with open('original_file.py', 'r') as file:
+    lines = file.readlines()
+
+with open('original_file.py', 'w') as file:
+    for line in lines:
+        if 'quadratic formula' not in line:
+            file.write(line)
+
+# Changes for task: Test the quadratic formula code in the new file to ensure it works correctly
+# Quadratic formula code
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# Testing the quadratic formula code
+a = 1
+b = -3
+c = 2
+print(quadratic_formula(a, b, c))
