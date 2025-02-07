@@ -19,3 +19,6 @@ with open("hello_world.txt", "w") as file:
 
 with open("hello_world.txt", "w") as file:
     file.write("Hello, World!")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Hello, World!")
