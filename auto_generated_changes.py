@@ -58,3 +58,11 @@ print("Hello World")
 
 with open("hello_world.txt", "w") as file:
     file.write("Hello World")
+
+# Changes for task: Execute the Python file to ensure it prints "Hello World" and creates the "hello_world.txt" file with the correct content
+# Write the Python code to print "Hello World" and create the "hello_world.txt" file with the correct content
+
+print("Hello World")
+
+with open("hello_world.txt", "w") as file:
+    file.write("Hello World")
