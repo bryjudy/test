@@ -315,3 +315,83 @@ new_lines = [line for line in lines if "quadratic formula" not in line]
 # Write the updated content back to the file
 with open(file_path, "w") as file:
     file.writelines(new_lines)
+
+# Changes for task: Create a new file named quadratic_formula.py
+with open("quadratic_formula.py", "w") as file:
+    file.write("""
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + discriminant**0.5) / (2*a)
+        root2 = (-b - discriminant**0.5) / (2*a)
+        return root1, root2
+""")
+
+# Changes for task: # Quadratic formula
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        x1 = (-b + math.sqrt(discriminant)) / (2*a)
+        x2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return x1, x2
+
+# Changes for task: a = 1
+b = -5
+c = 6
+
+# Calculate the discriminant
+discriminant = b**2 - 4*a*c
+
+# Calculate the two solutions
+solution1 = (-b + discriminant**0.5) / (2*a)
+solution2 = (-b - discriminant**0.5) / (2*a)
+
+print("The solutions are: {} and {}".format(solution1, solution2))
+
+# Changes for task: def quadratic_formula(a, b, c):
+discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        return -b / (2*a)
+    else:
+        root1 = (-b + discriminant**0.5) / (2*a)
+        root2 = (-b - discriminant**0.5) / (2*a)
+        return root1, root2
+
+# Changes for task: Move quadratic formula code to a new file
+# Quadratic_formula.py
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        return -b / (2*a)
+    else:
+        root1 = (-b + discriminant**0.5) / (2*a)
+        root2 = (-b - discriminant**0.5) / (2*a)
+        return root1, root2
+
+# Test_quadratic_formula.py
+from Quadratic_formula import quadratic_formula
+
+# Test with a=1, b=-3, c=2
+print(quadratic_formula(1, -3, 2))
+
+# Test with a=1, b=2, c=1
+print(quadratic_formula(1, 2, 1))
+
+# Test with a=1, b=2, c=3
+print(quadratic_formula(1, 2, 3))
