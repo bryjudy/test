@@ -1,2 +1,4 @@
-# Update the code to print the students using the print_students method
-class_class.print_students()
+from class_class import Class
+
+class_instance = Class()
+class_instance.print_students()
