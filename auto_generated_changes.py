@@ -244,3 +244,74 @@ a = 1
 b = -3
 c = 2
 print(quadratic_formula(a, b, c))
+
+# Changes for task: Create a new file named quadratic_formula.py
+with open("quadratic_formula.py", "w") as file:
+    file.write("""
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant > 0:
+        x1 = (-b + discriminant**0.5) / (2*a)
+        x2 = (-b - discriminant**0.5) / (2*a)
+        return x1, x2
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        return "No real roots"
+""")
+
+# Changes for task: Copy the code for the quadratic formula from the auto generated python file
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# Changes for task: Paste the code into the quadratic_formula.py file
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+if __name__ == "__main__":
+    a = float(input("Enter the coefficient of x^2: "))
+    b = float(input("Enter the coefficient of x: "))
+    c = float(input("Enter the constant term: "))
+    
+    roots = quadratic_formula(a, b, c)
+    print("Roots:", roots)
+
+# Changes for task: Remove the code for the quadratic formula from the auto generated python file
+import os
+
+# Define the file path
+file_path = "auto_generated.py"
+
+# Read the content of the file
+with open(file_path, "r") as file:
+    lines = file.readlines()
+
+# Remove the code for the quadratic formula
+new_lines = [line for line in lines if "quadratic formula" not in line]
+
+# Write the updated content back to the file
+with open(file_path, "w") as file:
+    file.writelines(new_lines)
