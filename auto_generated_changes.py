@@ -466,3 +466,106 @@ def quadratic_formula(a, b, c):
 print(quadratic_formula(1, -3, 2))  # Expected output: (2.0, 1.0)
 print(quadratic_formula(1, 2, 1))   # Expected output: -1.0
 print(quadratic_formula(1, 1, 1))   # Expected output: None
+
+# Changes for task: Create a new Python file named quadratic_formula.py
+# Python code to create a new file named quadratic_formula.py
+with open('quadratic_formula.py', 'w') as file:
+    file.write('''
+# Quadratic Formula Solver
+
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+# Example usage
+a = 1
+b = -3
+c = 2
+print(quadratic_formula(a, b, c))
+''')
+
+# Changes for task: def quadratic_formula(a, b, c):
+discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        x1 = (-b + discriminant**0.5) / (2*a)
+        x2 = (-b - discriminant**0.5) / (2*a)
+        return x1, x2
+
+# Changes for task: a = float(input("Enter the value of a: "))
+b = float(input("Enter the value of b: "))
+c = float(input("Enter the value of c: "))
+
+# Changes for task: # Calculate the discriminant of the quadratic equation
+a = 1
+b = 5
+c = 6
+
+discriminant = b**2 - 4*a*c
+print(discriminant)
+
+# Changes for task: # Task: Check if the discriminant is positive, negative, or zero
+a = 1
+b = 4
+c = 4
+
+discriminant = b**2 - 4*a*c
+
+if discriminant > 0:
+    print("Discriminant is positive")
+elif discriminant < 0:
+    print("Discriminant is negative")
+else:
+    print("Discriminant is zero")
+
+# Changes for task: import math
+# coefficients of the quadratic equation
+a = 1
+b = -3
+c = 2
+
+# calculate the discriminant
+discriminant = b**2 - 4*a*c
+
+# calculate the roots based on the discriminant
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print("Two distinct real roots: ", root1, " and ", root2)
+elif discriminant == 0:
+    root = -b / (2*a)
+    print("One real root: ", root)
+else:
+    realPart = -b / (2*a)
+    imaginaryPart = math.sqrt(-discriminant) / (2*a)
+    print("Two complex roots: ", realPart, "+", imaginaryPart, "i and ", realPart, "-", imaginaryPart, "i")
+
+# Changes for task: import math
+# Quadratic equation: ax^2 + bx + c = 0
+a = 1
+b = -3
+c = 2
+
+# Calculate the discriminant
+discriminant = b**2 - 4*a*c
+
+# Calculate the roots
+root1 = (-b + math.sqrt(discriminant)) / (2*a)
+root2 = (-b - math.sqrt(discriminant)) / (2*a)
+
+print("Root 1:", root1)
+print("Root 2:", root2)
