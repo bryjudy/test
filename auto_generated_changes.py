@@ -395,3 +395,74 @@ print(quadratic_formula(1, 2, 1))
 
 # Test with a=1, b=2, c=3
 print(quadratic_formula(1, 2, 3))
+
+# Changes for task: Create a new file named quadratic_formula.py
+# New code:
+with open("quadratic_formula.py", "w") as file:
+    file.write("""
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant > 0:
+        x1 = (-b + discriminant**0.5) / (2*a)
+        x2 = (-b - discriminant**0.5) / (2*a)
+        return x1, x2
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        return "No real roots"
+""")
+
+# Changes for task: # Quadratic formula
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        x1 = (-b + math.sqrt(discriminant)) / (2*a)
+        x2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return x1, x2
+
+# Changes for task: import math
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "No real roots"
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return root
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return root1, root2
+
+
+
+# Changes for task: Create a new file to test the quadratic formula code
+# New file: test_quadratic_formula.py
+# Copy and paste the quadratic formula code here for testing
+
+# Quadratic formula code to be tested
+import math
+
+def quadratic_formula(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return None
+    elif discriminant == 0:
+        x = -b / (2*a)
+        return x
+    else:
+        x1 = (-b + math.sqrt(discriminant)) / (2*a)
+        x2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return x1, x2
+
+# Test the quadratic formula code
+print(quadratic_formula(1, -3, 2))  # Expected output: (2.0, 1.0)
+print(quadratic_formula(1, 2, 1))   # Expected output: -1.0
+print(quadratic_formula(1, 1, 1))   # Expected output: None
