@@ -20,7 +20,7 @@ def calculate_circle_circumference(radius: float) -> float:
     return 2 * math.pi * radius
 
 def run_agent():
-    llm = ChatOpenAI(model="gpt-4")
+    llm = ChatOpenAI(temperature=0,model="gpt-4o")
     tools = [calculate_circle_area, calculate_circle_radius, calculate_circle_circumference]
     agent = create_react_agent(llm, tools)
     memory_saver = MemorySaver()
